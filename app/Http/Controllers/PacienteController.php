@@ -16,6 +16,7 @@ class PacienteController extends Controller
     public function listar(Request $req){
         $paciente = Paciente::all();
         return view('list')->with("paciente", $paciente);
+        
     }
 
     public function adicionar(Request $req){
