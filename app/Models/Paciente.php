@@ -11,13 +11,13 @@ class Paciente extends Model
 
     protected $fillable=[
     
-    "nome_pac",
-    "dt_nasc",
-    "nome_med",
-    "tipo_consulta",
-    "data",
-    "hora",
-    "observacao"
+        "nome_pac",
+        "dt_nasc",
+        "nome_med",
+        "tipo_consulta",
+        "data",
+        "hora",
+        "observacao"
 
     ];
 }

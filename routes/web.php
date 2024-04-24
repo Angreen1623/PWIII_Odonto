@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [ContatoController::class, "index"]);
+Route::post("/", [ContatoController::class, "adicionar"]);
+Route::get("/", [ContatoController::class, "editar"]);
+Route::post("/", [ContatoController::class, "atualizar"]);
+Route::get("/", [ContatoController::class, "excluir"]);
+Route::get("/", [ContatoController::class, "listar"]);

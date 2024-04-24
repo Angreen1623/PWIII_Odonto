@@ -16,15 +16,16 @@ class PacienteController extends Controller
     public function listar(Request $req){
         $paciente = Paciente::all();
         return view('list')->with("paciente", $paciente);
-        
     }
 
     public function adicionar(Request $req){
         $paciente = new Paciente;
-        $paciente = $req->nome;
-        $paciente->telefone = $req->telefone;
-        $paciente->origem = $req->origem;
-        $paciente->data_paciente = $req->data_paciente;
+        $paciente->nome_pac = $req->nome_pac;
+        $paciente->dt_nasc = $req->dt_nasc;
+        $paciente->nome_med = $req->nome_med;
+        $paciente->tipo_consulta = $req->tipo_consulta;
+        $paciente->data = $req->data;
+        $paciente->hora = $req->hora;
         $paciente->observacao = $req->observacao;
         $paciente->save();
         return redirect()->back();
@@ -40,10 +41,12 @@ class PacienteController extends Controller
         $paciente = Paciente::find($req->id);
         $paciente->update(
         [
-            "nome" => $req->nome,
-            "telefone" => $req->telefone,
-            "origem" => $req->origem,
-            "data_paciente" => $req->data_paciente,
+            "nome_pac" => $req->nome_pac,
+            "dt_nasc" => $req->dt_nasc,
+            "nome_med" => $req->nome_med,
+            "tipo_consulta" => $req->tipo_consulta,
+            "data" => $req->data,
+            "hora" => $req->hora,
             "observacao" => $req->observacao
         ]    
         );
