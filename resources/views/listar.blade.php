@@ -5,15 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Bootstrap Demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Listar</title>
 </head>
 
-<body>
-
-    <?php view('navbar');?>
+<body><?php view('navbar');?>
   
+
+<main class="grid min-h-screen w-full place-items-center bg-gray-900">
+    <div class="absolute left-1/2 top-1/2 h-96 w-80 -translate-x-1/2 -translate-y-1/2 rotate-6 rounded-2xl bg-gray-400"></div>
+
+    <div class="absolute left-1/2 top-1/2 h-96 w-80 -translate-x-1/2 -translate-y-1/2 rotate-6 space-y-6 rounded-2xl bg-gray-100 p-6 transition duration-300 hover:rotate-0">
+        <div class="flex justify-end">
+            <div class="h-4 w-4 rounded-full bg-gray-900"></div>
+        </div>
+
+        <header class="text-center text-xl font-extrabold text-gray-600">2021.09.01</header>
+
+        <div>
+            <p class="text-center text-5xl font-extrabold text-gray-900">Online Test (Physics)</p>
+            <p class="text-center text-4xl font-extrabold text-[#FE5401]">2 hours</p>
+        </div>
+
+        <footer class="mb-10 flex justify-center">
+            <button class="flex items-baseline gap-2 rounded-lg bg-[#FE5401] px-4 py-2.5 text-xl font-bold text-white hover:bg-[#FF7308]">
+                <span>Start</span>
+                <i class="fas fa-hand-peace text-xl"></i>
+            </button>
+        </footer>
+    </div>
+</main>
+
 </body>
 
 </html>
