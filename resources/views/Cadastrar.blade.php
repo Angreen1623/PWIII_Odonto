@@ -7,13 +7,6 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
@@ -21,83 +14,93 @@
         </style>
     </head>
     <body class="antialiased">
-        <?php view('navbar');?>
-
+       
     <div class="container">
-        <div class="col">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body mb-3" data-bs-theme="dark">">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Sistema de Agendamento de consultas</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="/">Cadastrar</a>
-                                <a class="nav-link" href="/listar">Consultar</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="row">
-                <p>
-                <h3>Sistema de um Consultório Odontológico</h3>  
-                </p>
-                <p>
-                <h4>Agendamento de Consultas </h4>
-                </p>
-            </div>
-    <form method="POST" action="/adicionarCliente">
+
+         <?php view('navbar');?>
+        
+    <form method="POST" action="/adicionar">
      @csrf    
-            <div class="row">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nome do Paciente:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nome_pac">
-                </div>
+  <div class="space-y-12">
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900">Sistema de um Consultório Odontológico</h2>
+      <p class="mt-1 text-sm leading-6 text-gray-600">Agendamento de Consultas</p>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Data de Nascimento:</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="dt_nasc">
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+             <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Nome do Paciente</label>
+                <div class="mt-2">
+                   <input type="text" name="nome_pac"  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
                 </div>
+            </div>
+         </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nome do Médico:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nome_med">
+         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+             <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Data de Nascimento</label>
+                <div class="mt-2">
+                   <input type="date" name="dt_nasc" value="dt_nasc" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
                 </div>
+            </div>
+         </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Tipo de Consulta:</label>
-                    <select class="form-select" aria-label="Default select example" name="tipo_consulta">
-                        <option value="nenhum foi selecionado">Selecionar</option>
+         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+             <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Nome do Médico</label>
+                <div class="mt-2">
+                   <input type="text" name="nome_med" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                </div>
+            </div>
+         </div>
+
+        </div>
+      </div>
+     </div>
+
+        <div class="sm:col-span-3">
+          <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Tipo de Consulta</label>
+          <div class="mt-2">
+            <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+            <option value="nenhum foi selecionado">Selecionar</option>
                         <option value="Cirurgia">Cirurgia</option>
                         <option value="Checkup">Checkup</option>
                         <option value="Estética">Estética</option>
                         <option value="Limpeza">Limpeza</option>
                         <option value="Retorno">Retorno</option>
-                    </select>
-                </div>
+            </select>
+          </div>
+        </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Data da Consulta:</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" name="data">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Hora da Consulta:</label>
-                    <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="" name="hora">
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Observação: </label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observacao"></textarea>
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+             <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Data da Consulta</label>
+                <div class="mt-2">
+                   <input type="date" name="data" value="data" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
                 </div>
             </div>
-            <div class="col">
-            <button type="submit" class="btn btn-dark">Cadastrar</button>
+         </div>
+
+         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+             <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Hora da Consulta</label>
+                <div class="mt-2">
+                   <input type="time" name="hora" value="hora" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                </div>
             </div>
-    </form>    
+         </div>
+
+         <div class="col-span-full">
+            <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Observação</label>
+            <div class="mt-2">
+                <textarea id="about" name="observacao" rows="3" value="observacao" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+            </div>
+         </div> 
+  </div>
+
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Agendar</button>
+  </div>
+</form>
         </div>
     </div>
 </body>
