@@ -10,7 +10,7 @@ class PacienteController extends Controller
     //select padrao
     public function index(Request $req){
         $paciente = Paciente::all();
-        return view('form')->with("paciente", $paciente);
+        return view('Cadastrar')->with("paciente", $paciente);
     }
 
     public function listar(Request $req){
