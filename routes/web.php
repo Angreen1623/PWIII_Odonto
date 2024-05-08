@@ -23,4 +23,9 @@ Route::get("/", [PacienteController::class, "listar"]); */
 
 Route::get("/", function(){
     return view('navbar');
+Route::get("/listar", [PacienteController::class, "listar"]);
+});
+
+Route::get('/', function (){
+    return view('Cadastrar');
 });
