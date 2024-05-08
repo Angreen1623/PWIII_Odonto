@@ -14,9 +14,13 @@ use App\Http\Controllers\PacienteController;
 |
 */
 
-Route::get("/", [PacienteController::class, "index"]);
+/*Route::get("/", [PacienteController::class, "index"]);
 Route::post("/", [PacienteController::class, "adicionar"]);
 Route::get("/", [PacienteController::class, "editar"]);
 Route::post("/", [PacienteController::class, "atualizar"]);
 Route::get("/", [PacienteController::class, "excluir"]);
-Route::get("/", [PacienteController::class, "listar"]);
+Route::get("/", [PacienteController::class, "listar"]);*/
+
+Route::get('/', function (){
+    return view('Cadastrar');
+});
