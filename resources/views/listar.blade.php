@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Listar</title>
+
+    <!-- Fonts -->
+    <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
 </head>
 
 <body>
     @include('navbar')
 
-    <section class="antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
+    <section class="antialiased text-gray-600 min-h-screen px-4">
 
-    <h3 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center my-10">Consultas Agendadas</h3>
+    <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">Consultas Agendadas</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600">Sistema de um Consultório Odontológico</p>
+    </div>
 
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16 sm:mt-10">
             @foreach($paciente as $pac)
             <!-- Card -->
             <div class="h-200 w-200">
@@ -46,7 +56,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                                 </svg>
 
-                                <a href="/excluir/{{ $pac->id }}">Excluir</a>
+                                <a href="/editar/{{ $pac->id }}">Editar</a>
                             </button>
                         </div>
                     </div>
