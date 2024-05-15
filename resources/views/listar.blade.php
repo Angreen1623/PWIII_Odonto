@@ -13,7 +13,7 @@
 
     <section class="antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
 
-    <h3 class="text-2xl font-extrabold text-stone-950 leading-snug mb-6 mt-6 text-center">Consultas Agendadas</h3>
+    <h3 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center my-10">Consultas Agendadas</h3>
 
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
