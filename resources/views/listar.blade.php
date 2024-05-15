@@ -13,7 +13,7 @@
 
     <section class="antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
 
-        <h3 class="text-3xl">Consultas agendadas</h3>
+        <h3 class="text-3xl">Consultas agenddas</h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach($paciente as $pac)
