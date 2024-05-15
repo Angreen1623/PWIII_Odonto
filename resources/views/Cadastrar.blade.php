@@ -17,7 +17,7 @@
        
     <div class="container">
 
-         <?php view('navbar');?>
+       <?php view('navbar');?>
         
     <form method="POST" action="/adicionar">
      @csrf    
@@ -30,7 +30,7 @@
           <div class="sm:col-span-4">
              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Nome do Paciente</label>
                 <div class="mt-2">
-                   <input type="text" name="nome_pac"  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                   <input type="text" name="nome_pac"  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Nome do Paciente:">
                 </div>
             </div>
          </div>
@@ -39,7 +39,7 @@
           <div class="sm:col-span-4">
              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Data de Nascimento</label>
                 <div class="mt-2">
-                   <input type="date" name="dt_nasc" value="dt_nasc" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                   <input type="date" name="dt_nasc" value="dt_nasc" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Data de Nascimento:">
                 </div>
             </div>
          </div>
@@ -48,7 +48,7 @@
           <div class="sm:col-span-4">
              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Nome do Médico</label>
                 <div class="mt-2">
-                   <input type="text" name="nome_med" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                   <input type="text" name="nome_med" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Nome do Médico:">
                 </div>
             </div>
          </div>
@@ -60,7 +60,7 @@
         <div class="sm:col-span-3">
           <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Tipo de Consulta</label>
           <div class="mt-2">
-            <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+            <select id="tipo_consulta" name="tipo_consulta" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
             <option value="nenhum foi selecionado">Selecionar</option>
                         <option value="Cirurgia">Cirurgia</option>
                         <option value="Checkup">Checkup</option>
@@ -75,7 +75,7 @@
           <div class="sm:col-span-4">
              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Data da Consulta</label>
                 <div class="mt-2">
-                   <input type="date" name="data" value="data" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                   <input type="date" name="data" value="data" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Data da Consulta:">
                 </div>
             </div>
          </div>
@@ -84,7 +84,7 @@
           <div class="sm:col-span-4">
              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Hora da Consulta</label>
                 <div class="mt-2">
-                   <input type="time" name="hora" value="hora" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+                   <input type="time" name="hora" value="hora" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Hora da Consulta:">
                 </div>
             </div>
          </div>
