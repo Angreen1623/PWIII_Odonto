@@ -18,9 +18,9 @@ Route::get("/", [PacienteController::class, "index"]);
 Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 /*Route::get("/", [PacienteController::class, "editar"]);
 Route::post("/", [PacienteController::class, "atualizar"]);
-Route::get("/", [PacienteController::class, "excluir"]);
 Route::get("/", [PacienteController::class, "listar"]);*/
 
+Route::get("/excluir/{id}", [PacienteController::class, "excluir"]);
 Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 Route::get("/listar", [PacienteController::class, "listar"]);
 
