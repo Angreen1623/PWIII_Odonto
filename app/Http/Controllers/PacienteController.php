@@ -50,7 +50,8 @@ class PacienteController extends Controller
             "observacao" => $req->observacao
         ]    
         );
-        return redirect()->back();
+        $paciente = Paciente::all();
+        return view('listar')->with("paciente", $paciente);
     }
 
     public function excluir(Request $req){
