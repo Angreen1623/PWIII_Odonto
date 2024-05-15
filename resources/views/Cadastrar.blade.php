@@ -17,7 +17,7 @@
        
     <div class="container">
 
-         <?php view('navbar');?>
+       <?php view('navbar');?>
         
     <form method="POST" action="/adicionar">
      @csrf    
