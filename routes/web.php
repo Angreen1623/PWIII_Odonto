@@ -23,7 +23,8 @@ Route::get("/", [PacienteController::class, "listar"]);*/
 Route::get("/excluir/{id}", [PacienteController::class, "excluir"]);
 Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 Route::get("/listar", [PacienteController::class, "listar"]);
-
+Route::get("/editar/{id}", [ClienteController::class,"editar"]);
+Route::post("/atualizar/{id}", [ClienteController::class,"atualizar"]);
 Route::get('/', function (){
     return view('Cadastrar');
 });
