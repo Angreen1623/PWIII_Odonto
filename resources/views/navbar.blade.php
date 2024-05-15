@@ -1,3 +1,4 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <nav class="bg-sky-400">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
         <a href="/" class="flex">
@@ -21,3 +22,5 @@
         </div>
     </div>
     </nav>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
