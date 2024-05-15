@@ -50,6 +50,7 @@ class PacienteController extends Controller
             "observacao" => $req->observacao
         ]    
         );
+        //quando  voltar do editar p/ listar deve se colocar a variavel abaixo
         $paciente = Paciente::all();
         return view('listar')->with("paciente", $paciente);
     }
