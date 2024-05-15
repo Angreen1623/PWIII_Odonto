@@ -18,9 +18,8 @@
     <div>
        @include('navbar')
         
-       <div class="isolate bg-white px-6 pt-24 sm:pt-32 lg:px-8">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Agendamento de Consultas</h2>
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">Agendamento de Consultas</h2>
     <p class="mt-2 text-lg leading-8 text-gray-600">Sistema de um Consultório Odontológico</p>
   </div>
 
@@ -100,7 +99,5 @@
 
   </form>
 </div>
-   
- </div>
 </body>
 </html>
