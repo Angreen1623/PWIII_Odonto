@@ -24,10 +24,6 @@ Route::get("/excluir/{id}", [PacienteController::class, "excluir"]);
 Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 Route::get("/listar", [PacienteController::class, "listar"]);
 
-Route::get("/navbar", function(){
-    return view('navbar');
-});
-
 Route::get('/', function (){
     return view('Cadastrar');
 });
