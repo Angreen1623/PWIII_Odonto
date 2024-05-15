@@ -34,7 +34,7 @@ class PacienteController extends Controller
     //select * from where....
     public function editar(Request $req){
         $paciente = Paciente::find($req->id);
-        return view('editar')->with("paciente", $paciente);
+        return view('Atualizar')->with("paciente", $paciente);
     }
 
     public function atualizar(Request $req){
