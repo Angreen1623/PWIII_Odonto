@@ -20,12 +20,12 @@ Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 Route::post("/", [PacienteController::class, "atualizar"]);
 Route::get("/", [PacienteController::class, "listar"]);*/
 
-Route::get("/editar/{id}", [PacienteController::class, "editar"]);
 Route::get("/excluir/{id}", [PacienteController::class, "excluir"]);
 Route::post("/adicionar", [PacienteController::class, "adicionar"]);
 Route::get("/listar", [PacienteController::class, "listar"]);
-Route::get("/editar/{id}", [PacienteController::class,"editar"]);
 Route::post("/atualizar/{id}", [PacienteController::class,"atualizar"]);
+Route::get("/editar/{id}", [PacienteController::class,"editar"]);
+
 Route::get('/', function (){
     return view('Cadastrar');
 });

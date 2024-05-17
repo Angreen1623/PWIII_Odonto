@@ -52,7 +52,7 @@ class PacienteController extends Controller
         );
         //quando  voltar do editar p/ listar deve se colocar a variavel abaixo
         $paciente = Paciente::all();
-        return view('listar')->with("paciente", $paciente);
+        return redirect('listar')->with("paciente", $paciente);
     }
 
     public function excluir(Request $req){
