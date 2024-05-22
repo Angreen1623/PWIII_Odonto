@@ -58,12 +58,37 @@
         <div class="relative mt-2.5">
           <div class="inset-y-0 left-0 flex items-center">
           <select id="tipo_consulta" name="tipo_consulta" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        <option value="nenhum foi selecionado">Selecionar</option>
+                        
+                      @if($paciente->tipo_consulta == "Cirurgia")
+                        <option value="Cirurgia" selected>Cirurgia</option>
+                      @else
                         <option value="Cirurgia">Cirurgia</option>
-                        <option value="Checkup">Checkup</option>
-                        <option value="Estética">Estética</option>
-                        <option value="Limpeza">Limpeza</option>
-                        <option value="Retorno">Retorno</option>
+                      @endif
+
+                      @if($paciente->tipo_consulta == 'Checkup')
+                      <option value="Checkup" selected>Checkup</option>
+                      @else
+                      <option value="Checkup">Checkup</option>
+                      @endif
+
+                      @if($paciente->tipo_consulta == 'Estética')
+                      <option value="Estética" selected>Estética</option>
+                      @else
+                      <option value="Estética">Estética</option>
+                      @endif
+
+                      @if($paciente->tipo_consulta == 'Limpeza')
+                      <option value="Limpeza" selected>Limpeza</option>
+                      @else
+                      <option value="Limpeza">Limpeza</option>
+                      @endif
+
+                      @if($paciente->tipo_consulta == 'Retorno')
+                      <option value="Retorno" selected>Retorno</option>
+                      @else
+                      <option value="Retorno">Retorno</option>
+                      @endif
+
             </select>
           </div>
         </div>

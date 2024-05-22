@@ -32,7 +32,7 @@
       <div>
         <label for="nome_pac" class="block text-sm font-semibold leading-6 text-gray-900">Nome do paciente</label>
         <div class="mt-2.5">
-          <input type="text" name="nome_pac" id="nome_pac" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="nome_pac" id="nome_pac" required autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -40,7 +40,7 @@
       <div>
         <label for="dt_nasc" class="block text-sm font-semibold leading-6 text-gray-900">Data de Nascimento</label>
         <div class="mt-2.5">
-          <input type="date" name="dt_nasc" id="dt_nasc" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="date" name="dt_nasc" id="dt_nasc" required autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -48,7 +48,7 @@
       <div class="sm:col-span-2">
         <label for="nome_med" class="block text-sm font-semibold leading-6 text-gray-900">Nome do Médico</label>
         <div class="mt-2.5">
-          <input type="text" name="nome_med" id="nome_med" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="nome_med" id="nome_med" required autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -57,8 +57,8 @@
         <label for="tipo_consulta" class="block text-sm font-semibold leading-6 text-gray-900">Tipo de Consulta</label>
         <div class="relative mt-2.5">
           <div class="inset-y-0 left-0 flex items-center">
-          <select id="tipo_consulta" name="tipo_consulta" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        <option value="nenhum foi selecionado">Selecionar</option>
+          <select id="tipo_consulta" name="tipo_consulta" required class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <option value="" disabled selected>Selecionar</option>
                         <option value="Cirurgia">Cirurgia</option>
                         <option value="Checkup">Checkup</option>
                         <option value="Estética">Estética</option>
@@ -73,21 +73,21 @@
       <div>
         <label for="data" class="block text-sm font-semibold leading-6 text-gray-900">Data da Consulta</label>
         <div class="mt-2.5">
-          <input type="date" name="data" id="data" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="date" name="data" id="data" required autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
       <!--hora da consluta-->
       <div>
         <label for="hora" class="block text-sm font-semibold leading-6 text-gray-900">Hora da Consulta</label>
         <div class="mt-2.5">
-          <input type="time" name="hora" id="hora" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="time" name="hora" id="hora" required autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
        <!--observação-->
       <div class="sm:col-span-2">
         <label for="observacao" class="block text-sm font-semibold leading-6 text-gray-900">Observação</label>
         <div class="mt-2.5">
-          <textarea name="observacao" id="observacao" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+          <textarea name="observacao" id="observacao" required rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
         </div>
       </div>
     </div>

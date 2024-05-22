@@ -34,7 +34,7 @@
 
                     <!-- Card content -->
                     <div class="relative pt-[1.5rem] pb-14">
-                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">Paciente: {{ $pac->nome_pac }}</h3>
+                        <h3 class="text-2xl font-extrabold text-indigo-50 leading-snug mb-2 truncate">Paciente: {{ $pac->nome_pac }}</h3>
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Consulta: {{ $pac->tipo_consulta }}</div>
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Nascimento: {{ $pac->dt_nasc }}</div>
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Médico: {{ $pac->nome_med }}</div>
@@ -63,8 +63,10 @@
                         </a>
                     </div>
                 </div>
-                @endforeach
             </div>
+            @endforeach
+        </div>
+            
     </section>
 </body>
 
