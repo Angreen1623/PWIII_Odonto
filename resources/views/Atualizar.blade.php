@@ -32,7 +32,7 @@
       <div>
         <label for="nome_pac" class="block text-sm font-semibold leading-6 text-gray-900">Nome do paciente</label>
         <div class="mt-2.5">
-          <input type="text" name="nome_pac" id="nome_pac" value="{{$paciente->nome_pac}}" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="nome_pac" id="nome_pac" required value="{{$paciente->nome_pac}}" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -40,7 +40,7 @@
       <div>
         <label for="dt_nasc" class="block text-sm font-semibold leading-6 text-gray-900">Data de Nascimento</label>
         <div class="mt-2.5">
-          <input type="date" name="dt_nasc" id="dt_nasc" value="{{$paciente->dt_nasc}}" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="date" name="dt_nasc" id="dt_nasc" required value="{{$paciente->dt_nasc}}" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -48,7 +48,7 @@
       <div class="sm:col-span-2">
         <label for="nome_med" class="block text-sm font-semibold leading-6 text-gray-900">Nome do Médico</label>
         <div class="mt-2.5">
-          <input type="text" name="nome_med" id="nome_med" value="{{$paciente->nome_med}}" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="nome_med" id="nome_med" required value="{{$paciente->nome_med}}" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
 
@@ -98,21 +98,21 @@
       <div>
         <label for="data" class="block text-sm font-semibold leading-6 text-gray-900">Data da Consulta</label>
         <div class="mt-2.5">
-          <input type="date" name="data" id="data" value="{{$paciente->data}}" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="date" name="data" id="data" required value="{{$paciente->data}}" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
       <!--hora da consluta-->
       <div>
         <label for="hora" class="block text-sm font-semibold leading-6 text-gray-900">Hora da Consulta</label>
         <div class="mt-2.5">
-          <input type="time" name="hora" id="hora" value="{{$paciente->hora}}" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="time" name="hora" id="hora" required value="{{$paciente->hora}}" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
        <!--observação-->
       <div class="sm:col-span-2">
         <label for="observacao" class="block text-sm font-semibold leading-6 text-gray-900">Observação</label>
         <div class="mt-2.5">
-          <textarea name="observacao" id="observacao" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">{{$paciente->observacao}}</textarea>
+          <textarea name="observacao" id="observacao" required rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">{{$paciente->observacao}}</textarea>
         </div>
       </div>
     </div>

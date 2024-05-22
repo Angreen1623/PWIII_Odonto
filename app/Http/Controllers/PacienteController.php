@@ -28,7 +28,7 @@ class PacienteController extends Controller
         $paciente->hora = $req->hora;
         $paciente->observacao = $req->observacao;
         $paciente->save();
-        return redirect()->back();
+        return redirect()->back()->with("sucess", $sucess = 1);
     }
 
     //select * from where....
