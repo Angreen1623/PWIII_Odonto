@@ -18,15 +18,16 @@
 <body>
     @include('navbar')
 
-    <section class="antialiased text-gray-600 min-h-screen px-4">
+    <section class="antialiased text-gray-600 px-4">
 
     <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">Consultas Agendadas</h2>
         <p class="mt-2 text-lg leading-8 text-gray-600">Sistema de um Consultório Odontológico</p>
     </div>
 
-
+    @if(count($paciente) > 0)
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16 sm:mt-10">
+            
             @foreach($paciente as $pac)
             <!-- Card -->
             <div class="h-200 w-200">
@@ -40,7 +41,7 @@
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Médico: {{ $pac->nome_med }}</div>
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Data da Consulta: {{ $pac->data }}</div>
                         <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Hora da Consulta: {{ $pac->hora }}</div>
-                        <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2">Observação: {{ $pac->observacao }}</div>
+                        <div class="text-xs font-bold uppercase text-blue-900 tracking-widest mb-2 truncate">Observação: {{ $pac->observacao }}</div>
                     </div>
                     <!-- Card footer -->
                     <div class="relative text-right">
@@ -65,7 +66,11 @@
                 </div>
             </div>
             @endforeach
+            
         </div>
+        @else     
+            <h3 class="text-2xl font-extrabold text-stone-400 leading-snug mb-2 truncate text-center mt-20">Ainda não há pacientes cadastrados</h3>
+        @endif
             
     </section>
 </body>
