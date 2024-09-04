@@ -105,6 +105,16 @@
                                 class="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Agendar</button>
                         </div>
 
+                        @if ($errors->any())
+                        <div class="mt-2">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li class="text-red-500">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+
                     </form>
                 </div>
             </div>
