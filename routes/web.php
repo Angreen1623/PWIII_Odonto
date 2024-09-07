@@ -34,9 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::post("/atualizar/{id}", [PacienteController::class,"atualizar"])->name('atualizar');
     Route::get("/editar/{id}", [PacienteController::class,"editar"])->name('editar');
 
-    Route::get('/', function (){
-        return view('Cadastrar');
-    });
 });
 
 require __DIR__.'/auth.php';
